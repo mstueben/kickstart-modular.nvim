@@ -22,8 +22,10 @@ require('lazy').setup({
 
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
-  --
+
   require 'custom/plugins/vim-cmake',
+
+  require 'custom/plugins/toggleterm',
 
   require 'kickstart/plugins/gitsigns',
 

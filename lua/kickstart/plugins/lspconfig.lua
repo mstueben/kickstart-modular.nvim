@@ -177,9 +177,27 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        clangd = {},
+        clangd = {
+          cmd = {
+            'docker',
+            'exec',
+            '-i',
+            'main-cnghost_dev-1',
+            'clangd',
+            '--header-insertion=never',
+            '--path-mappings=/home/matthias/repos/cngHost=/opt/corpuls/app,/home/matthias/corpuls/build/x64=/opt/corpuls/build/x64',
+          },
+          on_attach = function(client)
+            vim.keymap.set('n', '<leader>A', '<Cmd>ClangdSwitchSourceHeader<CR>', { desc = 'Switch between source and header (clangd)', buffer = true })
+            --   require('clangd_extensions.inlay_hints').setup_autocmd()
+            --   require('clangd_extensions.inlay_hints').set_inlay_hints()
+            --   -- nvlsp.on_attach(client)
+          end,
+          -- on_init = nvlsp.on_init,
+          -- capabilities = nvlsp.capabilities,
+        },
         -- gopls = {},
-        pyright = {},
+        -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
