@@ -25,7 +25,13 @@ require('lazy').setup({
 
   require 'custom/plugins/vim-cmake',
 
+  require 'custom/plugins/markdown_preview',
+
   require 'custom/plugins/toggleterm',
+
+  require 'custom/plugins/melange-nvim',
+
+  require 'custom/plugins/nvim-asciidoc-preview',
 
   require 'kickstart/plugins/gitsigns',
 

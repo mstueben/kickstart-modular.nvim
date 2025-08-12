@@ -185,7 +185,7 @@ return {
             'main-cnghost_dev-1',
             'clangd',
             '--header-insertion=never',
-            '--path-mappings=/home/matthias/repos/cngHost=/opt/corpuls/app,/home/matthias/corpuls/build/x64=/opt/corpuls/build/x64',
+            '--path-mappings=/home/matthias/repos/cngHost=/opt/DIR/app,/home/matthias/DIR/build/x64=/opt/DIR/build/x64',
           },
           on_attach = function(client)
             vim.keymap.set('n', '<leader>A', '<Cmd>ClangdSwitchSourceHeader<CR>', { desc = 'Switch between source and header (clangd)', buffer = true })
