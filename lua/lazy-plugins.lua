@@ -30,7 +30,15 @@ require('lazy').setup({
 
   require 'custom.plugins.melange-nvim',
 
+  --   require 'custom.plugins.luxmotion',
+
   require 'custom.plugins.nvim-asciidoc-preview',
+
+  require 'custom.plugins.copilot-lua',
+
+  require 'custom.plugins.copilot-chat',
+
+  require 'custom.plugins.blink-cmp-copilot',
 
   require 'kickstart.plugins.gitsigns',
 

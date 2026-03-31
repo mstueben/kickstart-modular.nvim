@@ -190,7 +190,7 @@ return {
               'main-dev_runtime-1',
               'sh',
               '-c',
-              'source /opt/corpuls/sdk/0.0.1/cng-x86-64/environment-setup-core2-64-corpulslinux-linux; clangd --header-insertion=never --path-mappings=/home/matthias/repos/cngHost=/opt/corpuls/app,/home/matthias/corpuls/build/x64=/tmp/build',
+              'source /opt/corpuls/sdk/0.0.1/cng-x86-64/environment-setup-core2-64-corpulslinux-linux; clangd --header-insertion=never --path-mappings=/home/matthias/repos/app=/opt/corpuls/app,/home/matthias/corpuls/build/x64=/tmp/build',
             },
           },
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
